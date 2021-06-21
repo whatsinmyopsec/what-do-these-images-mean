@@ -1,2 +1,7 @@
 # what-do-these-images-mean
-How to get your washing dialed
+
+- [ ] Planned webpage layout
+<img src="https://smonk.club/2021/06/21/ComplicatedEquatorialCrow.png">
+
+- [ ] Get accurate detection of symbols
+- [ ] Rotate image if needed
