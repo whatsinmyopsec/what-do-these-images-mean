@@ -1,11 +1,15 @@
 import cv2 as cv
 import numpy as np
 from matplotlib import pyplot as plt
+from PIL import Image
+from svglib.svglib import svg2rlg
+from reportlab.graphics import renderPM
 
-
-img = cv.imread('C:/Users/kbang/what-do-these-images-mean/data/symbols/water_temperature_30C.png',0)
+img = cv.imread("C:/Users/kbang/what-do-these-images-mean/data/white-background/white-with-black-icons-4.png",0)
 img2 = img.copy()
-template = cv.imread("C:/Users/kbang/what-do-these-images-mean/data/white-background/white-with-black-icons-4.png",0)
+drawing = svg2rlg('C:/Users/kbang/what-do-these-images-mean/data/symbols-svg/iron-medium.svg')
+renderPM.drawToFile(drawing, 'iron-medium.png', fmt='PNG')
+template = cv.imread("C:/Users/kbang/what-do-these-images-mean/iron-medium.png",0)
 w, h = template.shape[::-1]
 
 # All the 6 methods for comparison in a list
